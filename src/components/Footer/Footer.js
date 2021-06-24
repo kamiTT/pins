@@ -77,9 +77,7 @@ export default function Footer(props) {
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
-          </a>{" "}
-          {"&"} modified by Kamille Foster.
+          </a> Kamille Foster.
         </div>
       </div>
     </footer>

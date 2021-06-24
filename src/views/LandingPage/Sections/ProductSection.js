@@ -12,7 +12,8 @@ import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
-
+import { AddShoppingCart, ShoppingCart } from "@material-ui/icons";
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 const useStyles = makeStyles(styles);
 
 export default function ProductSection() {
@@ -21,36 +22,37 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>Types of Pins</h2>
           <h5 className={classes.description}>
-            Pins can be used on clothing, a bag, or essentially any piece of fabric. 
-            The enamel of the pins can be anything you like. There are millions of different 
-            individual pins available for you to buy, whether you are purchasing them from 
-            a collector, an Etsy store, or some other marketplace.
+          There are many different types of enamel pins to choose from, that being 
+          said there are two main brackets that these pins fall under. First, 
+          there are soft enamel pins. Second, you have a hard enamel. While they 
+          are both pretty similar, with similar functions, they have a few distinct 
+          differences.
           </h5>
         </GridItem>
       </GridContainer>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
+              title="Soft Enamel"
+              description="Soft enamel pins are cheaper for the manufacturer because less time goes into making them. They have a very rigid finish and are much less smooth. They are cheaper to buy for you, the consumer."
+              icon={ShoppingCartOutlinedIcon}
               iconColor="info"
               vertical
             />
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
-              iconColor="success"
+              title="Hard Enamel"
+              description="Hard enamel pins take a lot more work to make them smooth and flush. They aren't going to be as intricate or vivid, though they will be much sturdier than their soft enamel counterparts. They are perfect for a simple glossy finish, rather than complicated patterns."
+              icon={ShoppingCart}
+              iconColor="info"
               vertical
             />
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          {/* <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Fingerprint"
               description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
@@ -58,7 +60,7 @@ export default function ProductSection() {
               iconColor="danger"
               vertical
             />
-          </GridItem>
+          </GridItem> */}
         </GridContainer>
       </div>
     </div>
